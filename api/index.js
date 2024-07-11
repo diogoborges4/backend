@@ -14,15 +14,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
     credentials: true,
-    origin: "https://backend-vkyt.vercel.app/",
+    origin: ["http://localhost:5000", "https://reactgramapp.netlify.app/"],
   })
 );
 
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
-require("./config/db.js");
+require("../config/db.js");
 
-const router = require("./routes/Router.js");
+const router = require("../routes/Router.js");
 
 app.use(router);
 
