@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node App.js",
+    "build": "node App.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon ./app.js"
   },
