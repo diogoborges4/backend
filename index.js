@@ -8,15 +8,12 @@ const port = process.env.PORT;
 
 const app = express();
 
-app.use(express.json());
+
+app.use(cors()); 
+
+app.use(express.json()); 
 app.use(express.urlencoded({ extended: false }));
 
-app.use(
-  cors({
-    credentials: false,
-    origin: ["http://localhost:5000", "https://reactgramapp.netlify.app"],
-  })
-);
 
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
