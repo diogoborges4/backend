@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:5000", "https://reactgramapp.netlify.app/"],
+    origin: ["http://localhost:5000", "https://reactgramapp.netlify.app"],
   })
 );
 
