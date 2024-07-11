@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
     credentials: true,
-    origin: "https://backend-vkyt.vercel.app/",
+    origin: "https://reactgramapp.netlify.app",
   })
 );
 
