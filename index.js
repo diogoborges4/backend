@@ -20,9 +20,9 @@ app.use(
 
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
-require("../config/db.js");
+require("./config/db.js");
 
-const router = require("../routes/Router.js");
+const router = require("./routes/Router.js");
 
 app.use(router);
 
