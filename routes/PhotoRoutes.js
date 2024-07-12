@@ -26,7 +26,7 @@ const { imageUpload } = require("../middlewares/imageUpload");
 
 // Routes
 router.post(
-  "/users/:id",
+  "/",
   imageUpload.single("image"),
   photoInsertValidation(),
   validate,
