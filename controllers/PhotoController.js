@@ -11,6 +11,10 @@ const insertPhoto = async (req, res) => {
 
   const user = await User.findById(reqUser._id);
 
+  if(!user){
+    return res.status(404).json({msg: "Usuario nao encontrado"})
+  }
+
   const newPhoto = await Photo.create({
     image,
     title,
